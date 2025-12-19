@@ -114,9 +114,9 @@ main {
     word-spacing: 0.1em;
 }
 
-/* About Section */
+/* About Section - two-column layout */
 .about-content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     background-color: white;
     padding: 3rem 2.5rem;
@@ -124,36 +124,40 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-.about-header {
+.about-grid {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.about-image {
+    width: 320px;
+    height: 320px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    flex-shrink: 0;
     display: flex;
     align-items: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #e5e5e5;
+    justify-content: center;
+    color: #999;
 }
 
-.about-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-color: #f0f0f0;
-    object-fit: cover;
-    flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.about-text {
+    flex: 1 1 0;
 }
 
-.about-header h2 {
+.about-text h2 {
     font-size: 2rem;
     color: #2c3e50;
     font-weight: 600;
-    margin: 0;
+    margin: 0 0 1.25rem 0;
 }
 
 .about-section {
-    margin-bottom: 2.5rem;
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 2rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid #f3f3f3;
 }
 
 .about-section:last-child {
@@ -163,9 +167,9 @@ main {
 }
 
 .about-section h3 {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     color: #2c3e50;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     font-weight: 600;
 }
 
@@ -173,8 +177,6 @@ main {
     color: #555;
     line-height: 1.8;
     text-align: justify;
-    letter-spacing: 0.3px;
-    word-spacing: 0.1em;
 }
 
 /* Projects Section */
@@ -245,5 +247,18 @@ main {
 
     .hero {
         padding: 1rem;
+    }
+    /* About responsiveness: stack image above text */
+    .about-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .about-image {
+        width: 220px;
+        height: 220px;
+    }
+    .about-text {
+        width: 100%;
     }
 }
