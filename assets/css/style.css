@@ -124,6 +124,7 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
+
 .about-grid {
     display: flex;
     gap: 2.5rem;
@@ -131,20 +132,28 @@ main {
 }
 
 .about-image {
-    width: 320px;
-    height: 320px;
+    /* keep it a clean square while allowing it to scale down */
+    width: min(320px, 100%);
+    aspect-ratio: 1 / 1;
     background-color: #f0f0f0;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
+    overflow: hidden;
+    display: block;
+}
+
+.about-large-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;    /* keeps the photo filling the square */
+    object-position: center; /* important part stays centered */
 }
 
 .about-text {
     flex: 1 1 0;
+    padding-top: 0.25rem;
 }
 
 .about-text h2 {
@@ -255,8 +264,8 @@ main {
         gap: 1.5rem;
     }
     .about-image {
-        width: 220px;
-        height: 220px;
+        width: min(220px, 100%);
+        aspect-ratio: 1 / 1;
     }
     .about-text {
         width: 100%;
