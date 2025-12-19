@@ -119,19 +119,62 @@ main {
     max-width: 800px;
     margin: 0 auto;
     background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 3rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-.about-content h2 {
-    margin-bottom: 1.5rem;
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.about-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-header h2 {
+    font-size: 2rem;
     color: #2c3e50;
+    font-weight: 600;
+    margin: 0;
 }
 
-.about-content p {
+.about-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.about-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.about-section h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.about-section p {
     color: #555;
     line-height: 1.8;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    word-spacing: 0.1em;
 }
 
 /* Projects Section */
