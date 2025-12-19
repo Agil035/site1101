@@ -97,6 +97,10 @@ main {
 .summary p {
     font-size: 1.1rem;
     color: #555;
+    text-align: justify;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    word-spacing: 0.1em;
 }
 
 /* About Section */
