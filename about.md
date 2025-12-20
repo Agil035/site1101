@@ -36,11 +36,7 @@ permalink: /about/
         <div class="about-section">
           <h3>Qualifications</h3>
           <p>
-            I hold an IELTS score of 7.5, demonstrating strong proficiency in academic English, which supports my ability to study, communicate, and write effectively in an English-taught environment.
-          </p>
-
-          <p>
-            Through my IT studies, I am developing foundational skills in programming, problem-solving, and logical reasoning. I have also completed Academic Writing coursework, improving my structured argumentation, research-based writing, and critical analysis, and I actively participate in academic and informatics-related activities that support my practical development.
+            I hold an IELTS score of 7.5, demonstrating strong proficiency in academic English, which supports my ability to study, communicate, and write effectively in an English-taught environment.Through my IT studies, I am developing foundational skills in programming, problem-solving, and logical reasoning. I have also completed Academic Writing coursework, improving my structured argumentation, research-based writing, and critical analysis, and I actively participate in academic and informatics-related activities that support my practical development.
           </p>
         </div>
       </div>
