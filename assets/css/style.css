@@ -418,7 +418,7 @@ main {
         text-align: center;
     }
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: 1fr;
     }
     .project-img {
         height: 170px;
@@ -428,6 +428,19 @@ main {
     }
     .footer-links {
         gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text p {
+        text-align: left;
+    }
+    .nav-links {
+        justify-content: center;
     }
 }
 
