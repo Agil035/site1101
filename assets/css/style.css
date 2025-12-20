@@ -11,6 +11,11 @@ body {
     background-color: #f4f4f4;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -42,6 +47,8 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .nav-links a {
@@ -289,29 +296,99 @@ main {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 1rem;
+@media (max-width: 900px) {
+    .container {
+        padding: 0 16px;
     }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
     .hero {
-        padding: 1rem;
+        gap: 2rem;
+        padding: 1.5rem 0;
     }
-    /* About responsiveness: stack image above text */
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+    .summary {
+        padding: 2.5rem 2rem;
+    }
+    .about-content {
+        padding: 2.5rem 2rem;
+    }
     .about-grid {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1.75rem;
     }
     .about-image {
-        width: min(220px, 100%);
+        width: min(260px, 100%);
         aspect-ratio: 1 / 1;
     }
     .about-text {
         width: 100%;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .project-img {
+        height: 170px;
+    }
+    .footer-content {
+        gap: 1rem;
+    }
+    .footer-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .logo {
+        font-size: 1.3rem;
+    }
+    .nav-links {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    main {
+        padding: 2rem 0;
+    }
+    .hero {
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+    .profile-photo {
+        width: 170px;
+        height: 170px;
+    }
+    .summary {
+        padding: 2rem 1.5rem;
+    }
+    .about-content {
+        padding: 2rem 1.25rem;
+    }
+    .about-general-text {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-card h3 {
+        margin: 1.25rem 1.25rem 0.5rem;
+    }
+    .project-card p {
+        padding: 0 1.25rem 1.25rem;
+    }
+    .project-img {
+        height: 150px;
+    }
+    .footer {
+        padding: 1.5rem 0;
+    }
+    .footer-links a {
+        font-size: 0.9rem;
     }
 }
