@@ -222,8 +222,8 @@ main {
 }
 
 .about-section {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
     border-bottom: 1px solid #f0f0f0;
 }
 
@@ -242,8 +242,10 @@ main {
 
 .about-section p {
     color: #555;
-    line-height: 1.8;
+    font-size: 0.98rem;
+    line-height: 1.7;
     text-align: justify;
+    margin-top: 0.25rem;
 }
 
 .about-general-text {
@@ -482,6 +484,7 @@ main {
     }
     .about-section p {
         font-size: 0.95rem;
+        line-height: 1.7;
     }
     .about-general-text {
         max-width: 100%;
