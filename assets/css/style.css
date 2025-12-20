@@ -183,14 +183,20 @@ main {
     align-items: flex-start;
 }
 
+.about-images-column {
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .about-image {
-    /* keep it a clean square while allowing it to scale down */
-    width: min(320px, 100%);
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 280px;
     background-color: #f0f0f0;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    flex-shrink: 0;
     overflow: hidden;
     display: block;
 }
@@ -199,12 +205,12 @@ main {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;    /* keeps the photo filling the square */
-    object-position: center; /* important part stays centered */
+    object-fit: cover;
+    object-position: center;
 }
 
 .about-text {
-    flex: 1 1 0;
+    flex: 1;
     padding-top: 0.25rem;
 }
 
@@ -212,9 +218,33 @@ main {
     font-size: 2rem;
     color: #2c3e50;
     font-weight: 600;
-    margin: 0 0 1.25rem 0;
+    margin: 0 0 1.5rem 0;
 }
 
+.about-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.about-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.about-section h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.about-section p {
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
 
 .about-general-text {
     background: #fafbfc;
@@ -371,12 +401,18 @@ main {
         align-items: center;
         gap: 1.75rem;
     }
+    .about-images-column {
+        width: 100%;
+        max-width: 280px;
+    }
     .about-image {
-        width: min(260px, 100%);
-        aspect-ratio: 1 / 1;
+        height: 240px;
     }
     .about-text {
         width: 100%;
+    }
+    .about-text h2 {
+        text-align: center;
     }
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -432,6 +468,20 @@ main {
     }
     .about-content {
         padding: 2rem 1.25rem;
+    }
+    .about-images-column {
+        width: 100%;
+        max-width: 220px;
+        gap: 1rem;
+    }
+    .about-image {
+        height: 200px;
+    }
+    .about-section h3 {
+        font-size: 1.15rem;
+    }
+    .about-section p {
+        font-size: 0.95rem;
     }
     .about-general-text {
         max-width: 100%;
